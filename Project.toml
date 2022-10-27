@@ -1,0 +1,13 @@
+name = "ScratchML"
+uuid = "e7be3318-2cc8-400d-a994-12bb3dc2be29"
+authors = ["Sinh Trung"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
