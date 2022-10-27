@@ -1,6 +1,3 @@
-using ScratchML
-using Test
+using ScratchML, Test
 
-@testset "ScratchML.jl" begin
-    # Write your tests here.
-end
+@testset "Linear Regression" begin include("linear_regression_test.jl") end
