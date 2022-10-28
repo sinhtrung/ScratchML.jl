@@ -3,6 +3,9 @@ uuid = "e7be3318-2cc8-400d-a994-12bb3dc2be29"
 authors = ["Sinh Trung"]
 version = "0.1.0"
 
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
 [compat]
 julia = "1"
 
