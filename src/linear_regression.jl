@@ -7,11 +7,10 @@ hcat_feature_one(x) = hcat(ones(size(x)),x) #add ones to features to get β0
 function fit(x,y,regression = "Linear", λ = 0)
     X=hcat_feature_one(x)
     if regression == "Linear"
-        return inv(X'*X)*X'*y
+        return (X'*X)\X'*y #inv(X'*X)*X'*y
     elseif regression == "Ridge"
         Î = Diagonal(vcat([0],ones(size(x,2)))) #make diagonal identity array except at first diagonal
-        println(size(Î),size(X'*X))
-        return inv(X'*X-λ*Î)*X'*y
+        return (X'*X-λ*Î)\X'*y #inv(X'*X-λ*Î)*X'*y
     end
 end 
 
