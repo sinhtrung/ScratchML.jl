@@ -28,7 +28,7 @@ function loss(x,y,β,regression = "Linear", λ = 0)
         return 0.5(y-X*β)'*(y-X*β)
     elseif regression == "Ridge"
         return 0.5(y-X*β)'*(y-X*β)+0.5λ*sum(β[2:end]^.2)
-    elseif regression == "Lasso"
-        return 0.5(y-X*β)'*(y-X*β)+λ*sum(abs.(β[2:end]))
+    #elseif regression == "Lasso"
+    #    return 0.5(y-X*β)'*(y-X*β)+λ*sum(abs.(β[2:end]))
     end
 end 
